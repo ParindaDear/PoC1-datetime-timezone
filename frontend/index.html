@@ -1,0 +1,113 @@
+<!--ไฟล์ index.html นี้ให้ AI ในการช่วยเพื่อความประหยัดเวลา-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PoC1 ITB-eCoRS</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+
+  h1 {
+    text-align: center;
+    color: #4a90e2;
+  }
+
+  h2 {
+    color: #333;
+    margin-top: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #357ab8;
+  }
+
+  pre {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+
+  .section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 600px;
+  }
+
+  .section input {
+    width: 180px;
+  }
+</style>
+</head>
+<body>
+
+<h1>PoC1 ITB-eCoRS</h1>
+
+<!-- Create Study Plan -->
+<div class="section">
+  <h2>Create Study Plan</h2>
+  <div class="form-group">
+    <input id="plan_code" placeholder="Plan Code (FE)">
+    <input id="name_eng" placeholder="English Name">
+    <input id="name_th" placeholder="Thai Name">
+    <button id="create-plan">Create</button>
+  </div>
+</div>
+
+<!-- Assign Student -->
+<div class="section">
+  <h2>Assign Student</h2>
+  <div class="form-group">
+    <input id="student_id" placeholder="Student ID">
+    <input id="plan_id" placeholder="Plan ID">
+    <button id="assign">Assign</button>
+  </div>
+</div>
+
+<!-- View Student Plans -->
+<div class="section">
+  <h2>View Student Plans</h2>
+  <div class="form-group">
+    <input id="search_id" placeholder="Student ID">
+    <button id="search">Search</button>
+  </div>
+  <pre id="result"></pre>
+</div>
+
+<script type="module" src="./script.js"></script>
+</body>
+</html>

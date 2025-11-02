@@ -1,0 +1,1 @@
+PoC 1 สำหรับ Technical Spike เรื่อง date/time และ UTF-8
