@@ -42,3 +42,17 @@ npm install express mysql2 dotenv
 - ไฟล์ db.js (ทำ db connection)
 - ใช้ mysql2 library แล้วสร้าง connection ผ่าน pooling connection เเล้วก็ใช้เรื่องที่อ.สอนตอน week10 ใช้ dotenv เพื่อจะ access ข้อมูลใน .env
 
+---
+
+## Technical Spike Answers :
+###  which (data type should we use for date/time)
+ใน database ตรง created_at กับ updated_at ให้ใช้ datatype เป็น DATETIME  
+แล้วกำหนด DEFAULT เป็น current_timestamp เพื่อให้ database มัน auto-generate timestamp เพราะ DATETIME ไม่ผูกกับ timezone ของ server ทำให้เก็บค่าเป็น UTC ตรงตาม requirement ที่อ.ให้ และให้ Database เป็นคนสร้างค่า created_at / updated_at โดยอัตโนมัติ
+
+
+### how (to store/send/receive date/time)
+- ในไฟล์ db.js ที่เชื่อม backend กับ database ต้องกำหนด timezone: "Z" บอก backend ให้ใช้ UTC 
+- ในเรื่องการทำให้มันรองรับ UTF-8 ในไฟล์ db.js ก็กำหนด charset: "utf8mb4"  
+และใน database ตอน create database กับ table ก็เขียน CHARACTER SET utf8mb4
+
+
