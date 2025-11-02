@@ -44,6 +44,11 @@ npm install express mysql2 dotenv
 
 ---
 
+## ลองกรอกข้อมูลจาก Front ไป นี่คือสิ่งที่บันทึกใน database
+<img width="824" height="193" alt="image" src="https://github.com/user-attachments/assets/f6e4c8a9-a7db-493f-bd62-b9162ed9106b" />
+
+---
+
 ## Technical Spike Answers :
 ###  which (data type should we use for date/time)
 ใน database ตรง created_at กับ updated_at ให้ใช้ datatype เป็น DATETIME  
